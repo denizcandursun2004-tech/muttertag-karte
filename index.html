@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>Muttertagskarte</title>
-
-  <!-- Vorschau für WhatsApp -->
-  <meta property="og:title" content="Alles Liebe zum Muttertag ❤️">
-  <meta property="og:description" content="Eine kleine Karte von deinem Sohn 💐">
+  <title>Anneler Günü’n Kutlu Olsun ❤️</title>
+ 
+  <!-- WhatsApp / Sosyal Medya Link Önizlemesi -->
+  <meta property="og:title" content="Anneler Günü’n Kutlu Olsun ❤️">
+  <meta property="og:description" content="Oğlundan küçük ama kalpten bir kart 💐">
   <meta property="og:type" content="website">
-
+  <meta property="og:url" content="https://DEINNAME.github.io/muttertag-karte/">
+  <meta property="og:image" content="https://DEINNAME.github.io/muttertag-karte/preview.jpg">
+ 
   <style>
     body {
       margin: 0;
@@ -18,23 +20,60 @@
       align-items: center;
       justify-content: center;
       min-height: 100vh;
+      overflow: hidden;
     }
+ 
+    /* Arka planda uçan kalpler */
+    .heart {
+      position: absolute;
+      bottom: -40px;
+      font-size: 20px;
+      color: rgba(214, 51, 108, 0.4);
+      animation: floatUp 8s linear infinite;
+    }
+    .heart:nth-child(1) { left: 15%; animation-delay: 0s; }
+    .heart:nth-child(2) { left: 35%; animation-delay: 2s; }
+    .heart:nth-child(3) { left: 55%; animation-delay: 4s; }
+    .heart:nth-child(4) { left: 75%; animation-delay: 1s; }
+ 
+    @keyframes floatUp {
+      0% { transform: translateY(0); opacity: 0; }
+      10% { opacity: 1; }
+      100% { transform: translateY(-120vh); opacity: 0; }
+    }
+ 
     .card {
-      background: #ffffff;
+      background: white;
       padding: 26px;
       max-width: 420px;
       text-align: center;
       border-radius: 16px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      position: relative;
+      z-index: 2;
     }
+ 
     h1 {
       color: #d6336c;
       margin-bottom: 16px;
     }
+ 
     p {
       font-size: 17px;
       line-height: 1.6;
     }
+ 
+    /* Nabız atan kalp */
+    .pulse {
+      display: inline-block;
+      animation: pulse 1.6s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%   { transform: scale(1); }
+      50%  { transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+ 
     .signature {
       margin-top: 22px;
       font-weight: bold;
@@ -42,22 +81,32 @@
   </style>
 </head>
 <body>
-
+ 
+  <!-- Arka plan kalpleri -->
+  <div class="heart">❤️</div>
+  <div class="heart">💗</div>
+  <div class="heart">💖</div>
+  <div class="heart">❤️</div>
+ 
   <div class="card">
-    <h1>💐 Alles Liebe zum Muttertag 💐</h1>
-
+    <h1>💐 Anneler Günü’n Kutlu Olsun 💐</h1>
+ 
     <p>
-      😜 <strong>Mama,</strong> 😜<br>
-      ohne dich hätte ich<br>
-      kein Essen,<br>
-      keine sauberen Klamotten<br>
-      und wahrscheinlich viel mehr Chaos im Leben.
+      😜 <strong>Annem,</strong> 😜<br>
+      sen olmasaydın<br>
+      ne yemeğim olurdu,<br>
+      ne temiz kıyafetlerim,<br>
+      ne de hayatım bu kadar düzenli olurdu.
     </p>
-
-    <p>Danke &amp; Happy Muttertag!</p>
-
-    <p class="signature">❤️ Dein Sohn ❤️</p>
+ 
+    <p>Her şey için teşekkür ederim 💕</p>
+ 
+    <p class="signature">
+      <span class="pulse">❤️</span>
+      Oğlun Denizcan Dursun
+      <span class="pulse">❤️</span>
+    </p>
   </div>
-
+ 
 </body>
 </html>
